@@ -4,7 +4,7 @@ export default function TopBar(){
 
     return (
         <div className="topbar">
-            <h1>Title</h1>
+            <h1>topbar</h1>
             < Outlet />
         </div>
     )
