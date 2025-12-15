@@ -4,12 +4,13 @@ import SideBar from "../components/SideBar.jsx";
 
 export default function EditorPage(){
     return (
-               <div className="layout">
-
-                    <SideBar />
-                    <main> 
-                        <h1>Editor Page Content</h1>
-                    </main>
-                </div>
+        <div className="layout">
+                    
+            <SideBar />
+            <TopBar />
+            <main> 
+                <h1>Editor Page</h1>
+            </main>
+        </div>
     )
 }

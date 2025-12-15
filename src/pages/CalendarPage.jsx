@@ -6,10 +6,12 @@ import SideBar from "../components/SideBar.jsx";
 export default function CalendarPage(){
     return (
         <div className="layout">
-                    <SideBar />
-                    <main>
-                        <h1>Calendar Content</h1>
-                    </main>
-                </div>
+                    
+            <SideBar />
+            <TopBar />
+            <main>
+                <h1>Calendar Page</h1>
+            </main>
+        </div>
     )
 }
