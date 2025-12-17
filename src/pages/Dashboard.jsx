@@ -11,14 +11,16 @@ export default function Dashboard(){
   { platform: "Facebook", posts: 15 },
 ];
     return (
+        <>
         
         <div className="layout">
-            
+            <h3>Layout</h3>
             <SideBar /> 
             <TopBar />
-            <main>
+            <main className="Main">
+                <h3>Main</h3>
             <div className="Dashboard-page">
-                {/*<section className="Cards">*/}
+                {/*<section className="Cards">
                     <div className="Card">
                         <h3>Total Posts</h3>
                         <p className="Number">120</p>
@@ -39,7 +41,7 @@ export default function Dashboard(){
                         <p className="Number">6</p>
                     </div>
 
-                {/*</section>*/}
+                </section>
                 <section className="Upcoming-Posts">
 
                     <h2>Upcoming Posts</h2>
@@ -73,7 +75,7 @@ export default function Dashboard(){
                     <div className="Chart">
                         
                         <PieChart width={300} height={300}>
-                            <Pie
+                            <Pie className="Pie"
                               data={data}
                               dataKey="posts"
                               nameKey="platform"
@@ -97,12 +99,12 @@ export default function Dashboard(){
                         <p className="Tag-name">#TagName</p>
                         <p className="Tag-name">#TagName</p>
                         <p className="Tag-name">#TagName</p>
-                        {/*<span className="Usage-count">15 uses</span>*/}
-                    </div> 
-                </section>
+                        {/*<span className="Usage-count">15 uses</span>*}
+                    </div>
+                </section>*/}
             </div>
             </main>
         </div>
-        
+        </>
     )
 }
