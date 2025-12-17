@@ -6,32 +6,31 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: red;
+    background-color: whitesmoke;
     font-family: "Inter", sans-serif;
-    max-height: 100vh;
-    max-width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
     
     
    
 }
 .layout {
   
-   max-width: 100vw;
-   max-height: 100vh;
+   min-width: 100%;
+   height: 100%;
    padding: 0;
    margin-top: 6.875rem;
    margin-left: 15.625rem;
-   background-color: blue;
+   padding: 4rem;
+   background-color: whitesmoke;
 }
 
 
-.Main {
-    background-color: #f5f5f5;
-    width: 100%;
-    height: 100%;
-    
-    
-}
+
+
+
+  
+  
 
 
 
@@ -89,7 +88,7 @@ body {
     transition: background-color 0.3s;
     display:flex;
     align-items: center;
-    
+    border-radius: 5px;
 }
 
 .sidebar-icon{
@@ -132,7 +131,7 @@ body {
 
 
 .topbar {
- background-color: #2c2b00;
+ background-color: #2c2b27;
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -143,6 +142,7 @@ body {
  width: calc(100% - 15.625rem);
  padding-left:  1.25rem;
  padding-right:  1.25rem;
+ z-index: 1;
 }
 
 .topbar h1 {
@@ -174,18 +174,18 @@ body {
 
 /************** Dashboard **************/
 
-/*.Dashboard-page {
-  height: 200px;
+.Dashboard {
+
+  height: 100%;
   width: 100%;
   gap: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows:  repeat(4, 1fr);
-  background-color: aquamarine;
-  padding: 20rem 5rem;
-  margin: auto;
+  max-width: 1280px;
   
 }
+
 
 
 
@@ -196,17 +196,22 @@ body {
   flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
-
+  padding: 0rem; 
+  min-width: 70%;
 }
 
 .Card {
-  border: 1px solid black;
+  
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content:center
-  
+  justify-content:center;
+  padding-left: 1rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  border-radius: 20px;
 }
 
 .Card h3 {
@@ -215,40 +220,159 @@ body {
 
 .Number {
  font-weight:700;
- font-size: 1.7rem;
+ 
+ font-size: 3rem;
 }
 
 
 
 .Upcoming-Posts {
- border: 1px solid black;
  grid-column: 1 / 2;
  grid-row: 2 / -1;
-}
-.Posts-By-Platform{
- border: 1px solid green;
- grid-column: 2 / -1;
- grid-row: 2 / 4;
- 
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ background-color: white;
+ border-radius: 20px;
+ padding: 1.5rem;
+ gap: 2rem;
 }
 
-.Most-Used-Tags{
-  border: 1px solid pink;
-  grid-column: 2 / -1;
-  grid-row: 4 / -1;
+.Upcoming-Post{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 2fr 1fr;
   
 }
 
-/**********************/
-
-.Chart {
-  border: 1px solid mediumvioletred;
-  width: 200px;
-  height: 200px;
-  width: 90%;
-  z-index: -1;
+.Preview {
+  grid-column: 2 / -1;
+ grid-row: 1 / 2;
+ font-size: 1.5rem;
+ font-weight: bold;
 }
 
+.date{
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+
+.platform-icon {
+  border: 1px solid black;
+ height: 4rem;
+ width: 4rem;
+ grid-column: 1 / 2;
+ grid-row: 1 / -1;
+ margin: auto;
+ border-radius: 10px;
+}
+
+.buttons {
+ display: flex;
+ justify-content: space-between;
+ gap: 0.5rem;
+ margin-top: 1rem;
+ 
+}
+
+.buttons button {
+  height: 70px;
+  width: 15.625rem;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 0;
+}
+
+.New-Post-Btn {
+  background-color: #3773f7;
+}
+
+.Add-to-Calendar-Btn {
+  background-color: rgb(119, 119, 119);
+}
+
+.Posts-By-Platform{
+ grid-column: 2 / -1;
+ grid-row: 2 / 4;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
+    0 10px 20px rgba(0, 0, 0, 0.08);
+ background-color: white;
+ border-radius: 20px;
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ padding: 1.5rem;
+
+ 
+}
+
+ .Chart {
+  margin: 2rem 2rem 2rem 0;
+  width: 90%;
+  height: 12.7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  
+  
+}
+
+
+.Chart ol {
+  list-style-type: disc;
+  padding: 0;
+  margin: 0;
+  
+  
+}
+
+.Chart ol li {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+
+.Most-Used-Tags{
+  grid-column: 2 / -1;
+  grid-row: 4 / -1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
+  0 10px 20px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  
+}
+
+.Tag{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.Tag-name {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
+  0 10px 20px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+
+
+/**********************/
+
+                        
 
 
 

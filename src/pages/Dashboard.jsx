@@ -14,13 +14,12 @@ export default function Dashboard(){
         <>
         
         <div className="layout">
-            <h3>Layout</h3>
+            
             <SideBar /> 
             <TopBar />
-            <main className="Main">
-                <h3>Main</h3>
-            <div className="Dashboard-page">
-                {/*<section className="Cards">
+            <main className="Dashboard">
+                
+                <section className="Cards">
                     <div className="Card">
                         <h3>Total Posts</h3>
                         <p className="Number">120</p>
@@ -44,37 +43,38 @@ export default function Dashboard(){
                 </section>
                 <section className="Upcoming-Posts">
 
-                    <h2>Upcoming Posts</h2>
+                    <h2 className="Title">Upcoming Posts</h2>
 
                     <div className="Upcoming-Post">
-                        <img className="platform-icon" />
-                        <p className="Preview">Preview</p>
-                        <span className="date">Date</span>
+                        <img src="/assets/facebook.png"className="platform-icon" />
+                        <p className="Preview">Facebook</p>
+                        <span className="date">1/16/2024</span>
                     </div>
 
                     <div className="Upcoming-Post">
                         <img className="platform-icon" />
-                        <p className="Preview">Preview</p>
-                        <span className="date">Date</span>
+                        <p className="Preview">Instagram</p>
+                        <span className="date">1/16/2024</span>
                     </div>
 
                     <div className="Upcoming-Post">
                         <img className="platform-icon" />
-                        <p className="Preview">Preview</p>
-                        <span className="date">Date</span>
+                        <p className="Preview">X</p>
+                        <span className="date">1/16/2024</span>
                     </div>
 
-                    <div>
-                        <button className="New-Post">Create New Post</button>
-                        <button className="Add-to-Calendar">Add To Calendar</button>
+                    <div className="buttons">
+                        <button className="New-Post-Btn"> + Create New Post</button>
+                        <button className="Add-to-Calendar-Btn"> + Add To Calendar</button>
                     </div>
                 </section>
                 
                 <section className="Posts-By-Platform">
-                    <h2>Posts By Platform</h2>
+                    <h2 className="Title">Posts By Platform</h2>
+                    
                     <div className="Chart">
                         
-                        <PieChart width={300} height={300}>
+                        <PieChart className="PieChart"width={300} height={300}>
                             <Pie className="Pie"
                               data={data}
                               dataKey="posts"
@@ -84,25 +84,28 @@ export default function Dashboard(){
                               outerRadius={100}
                             />
                             
-                            
-
-
                         </PieChart>
+                        <ol>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>X</li>
+                            <li>LinkedIn</li>
+                        </ol>
                     </div>
-
+                    
                 </section>
 
                 <section className="Most-Used-Tags">
-                    <h2>Most Used Tags</h2>
+                    <h2 className="Title">Most Used Tags</h2>
                     <div className="Tag">
+                        <p className="Tag-name">#TabbbbbbgName</p>
                         <p className="Tag-name">#TagName</p>
                         <p className="Tag-name">#TagName</p>
                         <p className="Tag-name">#TagName</p>
-                        <p className="Tag-name">#TagName</p>
-                        {/*<span className="Usage-count">15 uses</span>*}
+                        {/*<span className="Usage-count">15 uses</span>*/}
                     </div>
-                </section>*/}
-            </div>
+                </section>
+            
             </main>
         </div>
         </>
