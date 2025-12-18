@@ -17,8 +17,8 @@ export default function Dashboard(){
             
             <SideBar /> 
             <TopBar />
-            <main className="Dashboard">
-                
+            <main>
+             <section className="Dashboard"  > 
                 <section className="Cards">
                     <div className="Card">
                         <h3>Total Posts</h3>
@@ -105,7 +105,7 @@ export default function Dashboard(){
                         {/*<span className="Usage-count">15 uses</span>*/}
                     </div>
                 </section>
-            
+             </section>
             </main>
         </div>
         </>
