@@ -31,7 +31,7 @@ export default function CalendarPage(){
                     
             <SideBar />
             <TopBar />
-            <main className="Calendar-page">
+            <main className="Main Calendar-page">
                 
     
 

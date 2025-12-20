@@ -29,7 +29,7 @@ body {
 
 
 /****************************/
- main {
+ .Main {
  grid-row: 2 / -1;
  grid-column: 2 / -1;
  margin: 0;
@@ -390,12 +390,26 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+/************** Dashboard **************/
+
+.editor-wrapper {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 220px;
+}
 
 
 
 
 
-
+.editor-wrapper .ProseMirror {
+  outline: none;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 220px;
+}
 
 
 
