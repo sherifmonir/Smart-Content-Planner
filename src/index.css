@@ -390,32 +390,122 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/************** Dashboard **************/
+/************** Editor Page **************/
 
-.editor-wrapper {
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 16px;
-  min-height: 220px;
+
+.Editor-Page {
+  position: relative;
+  margin: 2rem;
+  padding:0;
+  height: 30rem;
+  width: 95%;
+  background-color: red;
+  border: 1rem solid red;
+  border-bottom: 0;
+  border-radius: 20px;
+  
+  
+  
+}
+
+.Write-Post {
+  border: 1px solid black;
+  
+  height: 50%;
+  width: 65%;
+  margin: 1rem 0 0 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+ 
+  
+}
+
+.Write-Post p {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin:0;
+  
+  padding: 1rem;
+  background-color: grey;
+  height: 3.125rem;
+
 }
 
 
-
-
-
-.editor-wrapper .ProseMirror {
+.Write-Post textarea {
+  border: none;
   outline: none;
-  font-size: 15px;
-  line-height: 1.6;
-  min-height: 220px;
+  box-shadow: none;
+  resize: none; 
+  background-color: transparent; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none;
+  height: calc(100% - 3.125rem);
+  width: 100%;
+  margin-top:0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 
+.Add-Image{
+border: 1px solid black;
+border-radius: 10px;
+height: 35%;
+width: 70%;
+text-align: center;
+display: flex;
+bottom: 0;
+
+}
 
 
+.Add-Image span{
 
+border-radius: 10px;
+margin: auto;
 
+}
 
+.Platform-And-Date{
+border: 1px solid black;
+width: 25%;
+height: 30%;
+position: absolute;
+top: 7rem;
+right: 1rem;
 
+border-radius: 10px;
+
+}
+
+.Write-Post-Buttons{
+border: 1px solid black;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+height: 10%;
+width: 100%;
+display:flex;
+justify-content: end;
+align-items: center;
+gap: 0.5rem;
+padding-right: 2rem;
+position:absolute;
+bottom: 0;
+}
+
+.Write-Post-Buttons button {
+  height: 70%;
+  border-radius: 5px;
+  border: 0;
+}
+
+.Save-as-Draft-Btn {
+  background-color: rgb(119, 119, 119);
+}
+
+.Schedule-Post-Btn {
+ background-color: #3773f7;
+}
 
