@@ -1,10 +1,18 @@
 import React from 'react';
 import TopBar from "../components/TopBar.jsx";
 import SideBar from "../components/SideBar.jsx";
- 
+import {Pie, PieChart} from 'recharts'; 
+
 
 export default function Dashboard(){
    
+  const data = [
+  { platform: "LinkedIn", posts: 20 },
+  { platform: "Facebook", posts: 15 },
+  { platform: "Instagram", posts: 40 },
+  { platform: "Twitter", posts: 25 },
+  ];
+ 
     return (
         <>
         
@@ -68,7 +76,18 @@ export default function Dashboard(){
                     <h2 className="Title">Posts By Platform</h2>
                     
                     <div className="Chart">
-                        
+                        <PieChart className="PieChart"width={300} height={300}>
+                            <Pie className="Pie"
+                              data={data}
+                              dataKey="posts"
+                              nameKey="platform"
+                              cx="50%"
+                              cy="50%"
+                              outerRadius={100}
+                            />
+                            </PieChart>
+
+
                         
                         <ol>
                             <li>Facebook</li>

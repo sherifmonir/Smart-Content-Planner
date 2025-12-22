@@ -1,13 +1,20 @@
 import React  from 'react';
 import TopBar from "../components/TopBar.jsx";
 import SideBar from "../components/SideBar.jsx";
+import { useEditor, EditorContent } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
 
 
 export default function EditorPage(){
 
+    const editor = useEditor({
+    extensions: [StarterKit],
+    content: "<p>Write your post here...</p>",
+  });
     
     return (
-        
+       
+ 
         
         <div className="layout">
                     
@@ -20,6 +27,9 @@ export default function EditorPage(){
                     <p>Font Edits goes here</p>
                     <textarea></textarea>
                 </section>
+                <div className="editor-wrapper">
+      <EditorContent editor={editor} />
+        </div>
 
                 <section className="Add-Image">
                     <span>+Add Image</span>
